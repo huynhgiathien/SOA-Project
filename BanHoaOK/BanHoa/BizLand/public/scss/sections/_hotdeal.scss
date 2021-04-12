@@ -1,0 +1,62 @@
+#hotdeal{
+    margin-top: 40px;
+    .best-selling{
+        margin-top: 35px;
+    }
+    .banner{
+        overflow: hidden;
+        border-radius: 6px;
+        box-shadow: 0 6px 6px 0 rgba(0, 0, 0, 0.2);
+        margin-top: 15px;
+    }
+    .item{
+        position: relative;
+        padding: 5px;
+        margin-bottom: 0px;
+        .item-title{
+            a{
+                font-size: $f-size-other;
+            }
+        }
+        .btn-buy{
+            font-size: 18px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, 0%);
+            border-radius: 5px;
+            height: 33px;
+            width: 33px;
+            line-height: 33px;
+            padding-right: 2px;
+            background-color: $purple-background;
+            color: white;
+            opacity: 0;
+            visibility: hidden;
+            transition: .35s ease-in-out;
+            i{
+                font-size: 18px;
+            }
+            &:hover{
+                background-color: $green;
+            }
+        }
+        &:hover{
+            .btn-buy{
+                opacity: 1;
+                visibility: visible;
+                transform: translate(-50%, -50%);
+            }
+        }
+    }
+}
+
+/* Responsive */
+@include max-smobile{
+    #hotdeal{
+        .item{
+            margin-bottom: 20px;
+        }
+    }
+}
+

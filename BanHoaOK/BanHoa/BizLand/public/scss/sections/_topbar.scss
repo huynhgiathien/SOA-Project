@@ -1,0 +1,30 @@
+#topbar{
+    display: flex;
+    align-items: center;
+    padding: 7px 0px;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.3);
+    height: 45px;
+    z-index: 3;
+    span, a{
+        font-size: $f-size-secondary;
+        line-height: 1;
+    }
+    .log{
+        text-align: right;
+        a{
+            transition: .35s;
+            &:first-child{
+                margin-right: 10px;
+            }
+        }
+    }
+}
+
+/* Responsive */
+@include max-tablet{
+    #topbar{
+        .container{
+            max-width: 100% !important;
+        }
+    }
+}

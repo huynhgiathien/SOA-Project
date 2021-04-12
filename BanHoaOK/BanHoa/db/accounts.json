@@ -1,0 +1,59 @@
+[{
+  "_id": {
+    "$oid": "605231c742a80b36b0ce3587"
+  },
+  "id": "KH001",
+  "username": "thien123",
+  "password": "$2a$08$wtOJhAeNnbVCqysLMmxYduu.K0kQD2V0/WbzGONfYf14MAlZl.ZRK",
+  "type": 2,
+  "name": "Huỳnh Gia Thiện",
+  "email": "huynhgiathien1314@gmail.com",
+  "phone": "0988708663",
+  "OTP": "",
+  "membership": false,
+  "OTP_expired": "",
+  "balance": 0
+},{
+  "_id": {
+    "$oid": "605234e242a80b36b0ce358a"
+  },
+  "id": "QL001",
+  "username": "admin",
+  "password": "$2a$08$wtOJhAeNnbVCqysLMmxYduu.K0kQD2V0/WbzGONfYf14MAlZl.ZRK",
+  "type": 0,
+  "name": "Chủ shop",
+  "email": "huynhgiathien1314@gmail.com",
+  "phone": "0988708663",
+  "OTP": "",
+  "membership": false,
+  "OTP_expired": "",
+  "balance": 0
+},{
+  "_id": {
+    "$oid": "6052351042a80b36b0ce358b"
+  },
+  "id": "NV001",
+  "username": "lehoangphuc",
+  "password": "$2a$08$wtOJhAeNnbVCqysLMmxYduu.K0kQD2V0/WbzGONfYf14MAlZl.ZRK",
+  "type": 1,
+  "name": "Lê Hoàn Phúcg",
+  "email": "lehoangphuc@gmail.com",
+  "phone": "0123456789",
+  "OTP": "",
+  "membership": false,
+  "OTP_expired": "",
+  "balance": 0
+},{
+  "_id": {
+    "$oid": "606b0bcda8e48c1764776d9b"
+  },
+  "id": "KH002",
+  "username": "kietdoan",
+  "password": "$2a$08$wtOJhAeNnbVCqysLMmxYduu.K0kQD2V0/WbzGONfYf14MAlZl.ZRK",
+  "type": 2,
+  "name": "Đoàn Tuấn Kiệt",
+  "email": "kietdoan@gmail.com",
+  "phone": "0123456789",
+  "membership": 0,
+  "__v": 0
+}]

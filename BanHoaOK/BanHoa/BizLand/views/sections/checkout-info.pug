@@ -1,0 +1,101 @@
+section#checkout-info 
+    .container 
+        .checkout-form
+            form(action="/checkout/finish", method="POST") 
+                .row 
+                    .col-12.col-lg-8
+                        .receiving-info
+                            .logo
+                                a(href="/")
+                                    img(src="assets/images/logo.png", alt="Logo")
+                            .row
+                                .col-12.col-md-6.mb-3.mb-md-0
+                                    .info-header.d-flex.align-items-center.justify-content-between
+                                        h3.title Thông tin nhận hàng
+                                        a(href="#").login.d-flex.align-items-center
+                                            i.mr-1.bx.bxs-user-circle
+                                            span Đăng nhập
+                                    .receiving-info__form
+                                        .form-group 
+                                            input.form-control#email(type="email", name="email", placeholder="Email", required)
+                                            input.form-control#name(type="text", name="name", placeholder="Họ và tên", required)
+                                            input.form-control#tel(type="tel", name="tel", placeholder="Số điện thoại (tùy chọn)")
+                                            input.form-control#address(type="text", name="address", placeholder="Địa chỉ (đường, số nhà,...)")
+                                        .form-group.d-flex.justify-content-between
+                                            select.mr-2.form-control(name="calc_shipping_provinces" required)
+                                                option(value="") Tỉnh/Thành phố
+                                            select.form-control(name="calc_shipping_district" requried)
+                                                option(value="") Quận / Huyện
+                                            input.billing_address_1(type="hidden", value="")
+                                            input.billing_address_2(type="hidden", value="")
+                                        textarea.form-control#note(name="note", rows="4", placeholder="Ghi chú (tùy chọn)")
+                                .col-12.col-md-6
+                                    .method.shipping-method
+                                        h3.title Vận chuyển
+                                        .content-box 
+                                            .radio-wrapper.d-flex.align-items-center
+                                                input#shippingMethod.mb-0(type="radio", name="shippingMethod", value="40.000 VND", checked)
+                                                label.mb-0.ml-2(for="shippingMethod") Giao hàng tận nơi
+                                                span.ml-auto 40.000đ
+                                    .method.checkout-method
+                                        h3.title Thanh toán
+                                        .content-box 
+                                             fieldset(id="group-checkout")
+                                                .radio-wrapper.d-flex.align-items-center
+                                                    input#cod.mb-0(type="radio", name="checkoutMethod")
+                                                    label.mb-0.ml-2(for="cod") Thanh toán khi giao hàng (COD)
+                                                    i.ml-auto.bx.bx-money
+                                                .radio-wrapper.d-flex.align-items-center
+                                                    input#cards.mb-0(type="radio", name="checkoutMethod")
+                                                    label.mb-0.ml-2(for="cards") Chuyển khoản qua ngân hàng
+                                                    i.ml-auto.bx.bx-credit-card
+                    .col-12.col-lg-4
+                        aside.sidebar
+                            .sidebar__header
+                                h3.title Đơn hàng 
+                                    span.quantity (2 sản phẩm)
+                            .sidebar__content
+                                .order-summary.order-list 
+                                    .order-wrapper
+                                        .order.d-flex.align-items-center
+                                            .image
+                                                img(src="/assets/images/product-sale/1-1.jpg", alt="Item")
+                                                .quantity-wrapper.text-center
+                                                    span.quantity.text-white 2
+                                            span.product-name.ml-2 Ngày xanh
+                                            span.price.ml-auto 1.000.000₫
+                                        .order.d-flex.align-items-center
+                                            .image
+                                                img(src="/assets/images/product-sale/1-1.jpg", alt="Item")
+                                                .quantity-wrapper.text-center
+                                                    span.quantity.text-white 2
+                                            span.product-name.ml-2 Ngày xanh
+                                            span.price.ml-auto 1.000.000₫
+                                        .order.d-flex.align-items-center
+                                            .image
+                                                img(src="/assets/images/product-sale/1-1.jpg", alt="Item")
+                                                .quantity-wrapper.text-center
+                                                    span.quantity.text-white 2
+                                            span.product-name.ml-2 Ngày xanh
+                                            span.price.ml-auto 1.000.000₫
+                                .order-summary.discount.d-flex
+                                    input.form-control(type="text", name="discount", placeholder="Nhập mã giảm giá")
+                                    button.hover-purple.btn.btn-primary(type="button") Áp dụng
+                                .order-summary.total-lines 
+                                    table.total-line-table.w-100
+                                        tbody.total-line-table__tbody
+                                            tr.total-line--subtotal
+                                                th.total-line-text  Tạm tính 
+                                                td.total-line-price.text-right 1.000.000₫
+                                            tr.total-line--shipping-free
+                                                th.total-line-text  Phí vận chuyển
+                                                td.total-line-price.text-right 40.000₫           
+                                        tfoot.total-line-table__footer 
+                                            tr.total-line--payment-due
+                                                th.total-line-text  Tổng cộng
+                                                td.total-line-price.text-right 1.040.000₫  
+                                .order-summary.field__input-btn-wrapper.d-flex
+                                    a(href="#").d-flex.align-items-center
+                                        i.bx.bx-chevron-left
+                                        span Quay về giỏ hàng 
+                                    button.ml-auto.btn.btn-primary.hover-purple(type="submit") Đặt hàng

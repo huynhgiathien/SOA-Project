@@ -1,0 +1,4 @@
+{
+    "ext": "pug,js",
+    "ignore": ["public/scss/", "public/images/", "public/vendors/"]
+}

@@ -1,0 +1,24 @@
+.back-to-top {
+    position: fixed;
+    text-align: center;
+    width: 40px;
+    height: 40px;
+    line-height: 35px;
+    border-radius: 100%;
+    right: 15px;
+    bottom: 15px;
+    background: $purple-background;
+    border: 2px solid white;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.5s ease-in-out;
+    z-index: 999999;
+    i{
+        font-size: 16px;
+        color: #fff;
+    }
+    &.open{
+        opacity: 1;
+        visibility: visible;
+    }
+  }

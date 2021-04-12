@@ -1,0 +1,78 @@
+section#done-info 
+    .container 
+        form(action="", method="POST")
+            .row
+                .col-12 
+                    .done-img.pr-3.mb-4.mb-md-2.text-center.text-lg-left
+                        svg(xmlns='http://www.w3.org/2000/svg' width='72px' height='72px')
+                            g(fill='none' stroke='#8EC343' stroke-width='2')
+                                circle(cx='36' cy='36' r='35' style='stroke-dasharray:240px, 240px; stroke-dashoffset: 480px;')
+                                path(d='M17.417,37.778l9.93,9.909l25.444-25.393' style='stroke-dasharray:50px, 50px; stroke-dashoffset: 0px;')
+                    .form-header.d-flex.flex-column.flex-md-row.align-items-center.mb-4
+                        .thank-you
+                            h3 Cảm ơn bạn đã đặt hàng
+                            p 
+                                span -
+                                span &nbsp
+                                span Một email xác nhận đã được gửi tới 
+                                strong phucle@gmail.com
+                                span &nbsp
+                                span .Xin vui lòng kiểm tra email của bạn
+                .col-12.col-lg-8.order-2.order-lg-1
+                    .form-info
+                        .row.p-2
+                            .col-12.col-md-6
+                                h3.title Thông tin mua hàng
+                                p.name Lê Hoàng Phúc
+                                p.phone 0856511169
+                            .col-12.col-md-6
+                                h3.title Địa chỉ nhận hàng
+                                p.name Lê Hoàng Phúc
+                                p.address1 22/CMT8
+                                p.address2 TPHCM, Quận 7
+                            .col-12.col-md-6
+                                h3.title Phương thức thanh toán
+                                p.address Thanh toán khi giao hàng (COD)
+                            .col-12.col-md-6
+                                h3.title Phương thức vận chuyển
+                                p Giao hàng tận nơi - 40.000₫
+                    .btn-wrapper.d-flex.justify-content-end.mt-4
+                        a(href="/products").hover-purple.btn.btn-continue-buy.btn-primary.text-white Tiếp tục mua hàng 
+                        a.hover-purple.btn.btn-print.btn-primary.text-white 
+                            i.bx.bx-printer
+                            span &nbsp
+                            span In 
+                .col-12.col-lg-4.order-1.order-lg-2.mb-4.mb-md-0
+                    .order-details
+                        aside.sidebar
+                            .sidebar__header
+                                h3.title Đơn hàng 
+                                    span.quantity (2 sản phẩm)
+                            .sidebar__content
+                                .order-summary.order-list 
+                                    .order-wrapper
+                                        .order.d-flex.align-items-center
+                                            .image
+                                                img(src="/assets/images/product-sale/1-1.jpg", alt="Item")
+                                                .quantity-wrapper.text-center
+                                                    span.quantity.text-white 2
+                                            span.product-name.ml-2 Ngày xanh
+                                            span.price.ml-auto 1.000.000₫
+                                .order-summary.total-lines 
+                                    table.total-line-table.w-100
+                                        tbody.total-line-table__tbody
+                                            tr.total-line--subtotal
+                                                th.total-line-text  Tạm tính 
+                                                td.total-line-price.text-right 1.000.000₫
+                                            tr.total-line--shipping-free
+                                                th.total-line-text  Phí vận chuyển
+                                                td.total-line-price.text-right 40.000₫           
+                                        tfoot.total-line-table__footer 
+                                            tr.total-line--payment-due
+                                                th.total-line-text  Tổng cộng
+                                                td.total-line-price.text-right 1.040.000₫  
+
+
+
+
+

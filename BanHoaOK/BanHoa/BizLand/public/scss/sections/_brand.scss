@@ -1,0 +1,48 @@
+#brand{
+    margin: 40px 0px 0px;
+    padding: 35px 0px;
+    background-color: #fafafa;
+    .prev-arrow1, .next-arrow1{
+        width: 45px;
+        height: 45px;
+        line-height: 20px;
+        border-radius: 100%;
+        text-align: center;
+        border: 2px solid white;
+        background-color: $purple-background;
+        transition: 0.35s ease-in-out;
+    }
+    .prev-arrow1{
+        left: -15px;
+    }
+    .next-arrow1{
+        right: -15px;
+    }
+    .banner-item{
+        img{
+            margin: 0 auto;
+        }
+    }
+}
+
+/* Responsive */
+@include max-mobile{
+    #brand{
+        //- Slick arrows (Slider)
+        .slick-arrow{
+            font-size: 24px;
+        }
+        .prev-arrow1, .next-arrow1{
+            width: 35px;
+            height: 35px;
+        }
+        .prev-arrow1{
+            left: 0px;
+            padding: 1px 3px 0px 0px;
+        }
+        .next-arrow1{
+            right: 0px;
+            padding: 0px 0px 0px 2px;
+        }
+    }
+}

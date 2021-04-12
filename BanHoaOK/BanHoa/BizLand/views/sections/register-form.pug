@@ -1,0 +1,29 @@
+section#register-form 
+    .container
+        .row.justify-content-center
+            .col-12.col-sm-10.col-md-8.col-lg-5
+                .form-content
+                    h3.title.text-center Đăng kí
+                    form(action="/register", method="POST")
+                        .form-group.mb-3
+                            label(for="name") Họ & tên:
+                            input#name.form-control(type="text", name="name", placeholder="Nhập họ tên...")
+                        .form-group.mb-3
+                            label(for="tel") Số điện thoại:
+                            input#email.form-control(type="tel", name="tel", placeholder="Nhập số điện thoại...") 
+                        .form-group.mb-3
+                            label(for="password") Mật khẩu:
+                            input#password.form-control(type="password", name="password", placeholder="Nhập mật khẩu...")
+                        .form-group 
+                            label(for="re-password") Nhập lại mật khẩu:
+                            input#re-password.form-control(type="password", name="re-password", placeholder="Xác nhận mật khẩu...")
+                        button.hover-purple.btn.text-white.w-100.mt-4(type="submit") Đăng kí
+                    p.text-center.mb-3 Đã có tài khoản đăng nhập
+                        span &nbsp
+                        a(href="/login").purple-text tại đây
+                    p.lineside Hoặc
+                    .social-login.d-flex.justify-content-between
+                        a(href="#").facebook.text-center
+                            i.bx.bxl-facebook-circle
+                        a(href="#").google.text-center
+                            i.bx.bxl-google-plus-circle

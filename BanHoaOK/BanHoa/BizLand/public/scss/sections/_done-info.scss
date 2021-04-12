@@ -1,0 +1,59 @@
+#done-info{
+    .form-info, .order-details{
+        padding: 15px;
+        border-radius: 15px;
+        box-shadow: 0 5px 30px rgba(0, 0, 0, .15);
+    }
+    .order-details{
+        padding: 0;
+        padding-left: 5px;
+        padding-right: 5px;
+        padding-bottom: 15px;
+        margin: 0;
+    }
+    .form-header{
+        h3{
+            font-weight: 600;
+        }
+        p{
+            margin-bottom: 0;
+        }
+    }
+    .form-info{
+        .title{
+            margin-bottom: 5px;
+        }
+    }
+
+    //- Xóa border 1px solid ở phần số lượng sản phẩm
+    .sidebar{
+        .sidebar__content{
+            .order-summary{
+                .order-wrapper{
+                    border: 0px;
+                }
+            }
+        }
+    }
+    .btn-wrapper{
+        .btn-continue-buy{
+            margin-right: 12px;
+        }
+        .btn{
+            background-color: $purple-background;
+            border: none;
+            outline: none;
+            padding: 8px 10px;
+        }
+    }
+
+}
+
+/* Responsive */
+@include max-tablet{
+    #done-info{
+        .form-info{
+            margin: 0px 0px 30px;
+        }
+    }
+}

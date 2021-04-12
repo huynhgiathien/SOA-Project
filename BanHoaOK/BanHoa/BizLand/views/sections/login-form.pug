@@ -1,0 +1,29 @@
+section#login-form 
+    .container
+        .row.justify-content-center
+            .col-12.col-sm-10.col-md-8.col-lg-5
+                .form-content
+                    h3.title.text-center Đăng nhập
+                    form(action="/login", method="POST")
+                        .form-group.mb-3
+                            label(for="email") Email:
+                            input#email.form-control(type="email", name="email", placeholder="Nhập Email...") 
+                        .form-group 
+                            label(for="password") Mật khẩu:
+                            input#password.form-control(type="password", name="password", placeholder="Mật khẩu...") 
+                        .ft-login.d-flex.align-items-center.justify-content-between
+                            .save-pw.d-flex.align-items-center
+                                input#save-pw(type="checkbox", name="remember")
+                                label(for="save-pw").mb-0 Lưu mật khẩu
+                            .forget-pw.text-center
+                                a(href="#") Quên mật khẩu ?
+                        button.hover-purple.btn.text-white.w-100(type="submit") Đăng nhập
+                    p.text-center.mb-3 Chưa có tài khoản đăng kí
+                        span &nbsp
+                        a(href="/register").purple-text tại đây
+                    p.lineside Hoặc
+                    .social-login.d-flex.justify-content-between
+                        a(href="#").facebook.text-center
+                            i.bx.bxl-facebook-circle
+                        a(href="#").google.text-center
+                            i.bx.bxl-google-plus-circle

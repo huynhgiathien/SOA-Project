@@ -1,0 +1,196 @@
+section#product-info 
+    .container
+        .row 
+            .col-12.col-lg-6 
+                .product-slideshow
+                    .row 
+                        .col-12.col-lg-2.order-2.order-lg-1
+                            .slider-nav
+                                .image
+                                    img(src="/assets/images/product-sale/1-1.jpg", alt="Item")
+                                .image
+                                    img(src="/assets/images/product-sale/1-1.jpg", alt="Item")
+                                .image
+                                    img(src="/assets/images/product-sale/1-1.jpg", alt="Item")
+                                .image
+                                    img(src="/assets/images/product-sale/1-1.jpg", alt="Item")
+                                .image
+                                    img(src="/assets/images/product-sale/1-1.jpg", alt="Item")
+                        .col-12.col-lg-10.order-1.order-lg-2.mb-4.mb-lg-0
+                            .slider-for
+                                .image
+                                    a.portfokio-lightbox(href="/assets/images/product-sale/1.jpg", data-gallery="portfolioGallery") 
+                                        img(src="/assets/images/product-sale/1.jpg", alt="Item")
+                                .image
+                                    a.portfokio-lightbox(href="/assets/images/product-sale/1.jpg", data-gallery="portfolioGallery") 
+                                        img(src="/assets/images/product-sale/1.jpg", alt="Item")
+                                .image
+                                    a.portfokio-lightbox(href="/assets/images/product-sale/1.jpg", data-gallery="portfolioGallery") 
+                                        img(src="/assets/images/product-sale/1.jpg", alt="Item")
+                                .image
+                                    a.portfokio-lightbox(href="/assets/images/product-sale/1.jpg", data-gallery="portfolioGallery") 
+                                        img(src="/assets/images/product-sale/1.jpg", alt="Item")
+                                .image
+                                    a.portfokio-lightbox(href="/assets/images/product-sale/1.jpg", data-gallery="portfolioGallery") 
+                                        img(src="/assets/images/product-sale/1.jpg", alt="Item")
+                            .prev-arrow2.slick-arrow
+                                i.icofont-thin-double-left
+                            .next-arrow2.slick-arrow
+                                i.icofont-thin-double-right
+            .col-12.col-lg-6 
+                .product-description-wrapper 
+                    h3.title Kiêu sa
+                    p.price 450.000₫
+                    p.status-text tình trạng: 
+                        span &nbsp
+                        span.status.text-white còn hàng
+                    .form-product
+                        form#add-to-cart-form(enctype="multipart/form-data", method="POST", action="/cart/add")
+                            .form-group.mb-0
+                                .quantity-select.d-flex.align-items-center
+                                    label(for="quantity").mb-0 Số lượng:
+                                    span &nbsp
+                                    .d-flex        
+                                        button(type="button").hover-purple.qty-adjust.minus-icon -
+                                        input#quantity.text-center(type="text", name="quantity", size= "2", maxlength="3", value ="1")
+                                        button(type="button").hover-purple.qty-adjust.plus-icon +
+                            .button_actions
+                                button(type="submit").hover-purple.btn.btn-primary.btn-buy thêm vào giỏ hàng
+                    .product-summary
+                        p.desc 
+                            b Mô tả:
+                        p - Miễn Phí Vận Chuyển cho hóa đơn trên 199,000đ tại khu vực nội thành Tp.HCM & Hà Nội.
+                        p - Giao hàng trong ngày tại khu vực Tp.HCM & Hà Nội khi đặt hàng trước 17h mỗi ngày; và giao hàng từ 2-3 ngày cho các tỉnh/ thành khác toàn quốc.
+                        p - Khi nhận bó hoa này, các quý cô, quý bà như được tôn thêm sự tinh khiết, thanh tao, sang trọng, quí phái, rất lãng mạn của người gửi giàu tình cảm và có tâm hồn bay bổng. Thích hợp tặng người yêu, bạn bè, chúc mừng... Lưu ý: - Chúng tôi có thể thiết kế theo mẫu hoa như vậy nhưng với các...
+                    .social-links
+                        .d-flex.align-items-center
+                            span 
+                                b Chia sẻ:
+                            ul.social-links.d-flex.mb-0.ml-4
+                                li
+                                    a.facebook(href="#")
+                                        i.icofont-facebook
+                                li
+                                    a.twitter(href="#")
+                                        i.icofont-twitter
+                                li
+                                    a.google-plus(href="#")
+                                        i.icofont-google-plus
+                                li
+                                    a.pinterest(href="#")
+                                        i.icofont-pinterest
+                                li
+                                    a.pinterest(href="#")
+                                        i.icofont-linkedin
+        .related_products                        
+            .row 
+                .col-12 
+                    .section-title
+                        h3.title Sản phẩm liên quan
+                    .product
+                        .row 
+                            .col-12.col-sm-6.col-md-6.col-lg-4.col-xl-3
+                                .item
+                                    .tag-sale 
+                                        span Sale
+                                    .image
+                                        a(href="#").find-out
+                                            img(src="/assets/images/product-sale/1-1.jpg", alt="Item")
+                                        a(href="#").find-in
+                                            img(src="/assets/images/product-sale/1.jpg", alt="Item")
+                                    .item-info
+                                        h3.item-title
+                                            a(href="#") Thành công 
+                                        .price 
+                                            span.special-price 500.000₫
+                                            span.old-price 600.000₫
+                                    .actions 
+                                        form#formAddProduct(action="", method="POST", enctype="multipart/form-data", data-id="") 
+                                            input.hidden(type="hidden", name="", value="")
+                                            button(type="submit").btn.btn-buy.d-flex.justify-content-center.align-items-center.mx-auto.text-white 
+                                                span Mua hàng
+                                                .icon
+                                                    i.icofont-shopping-cart
+                                    .box-link               
+                                        a(href="/product").link-quickview
+                                            i.icofont-search-1
+                            .col-12.col-sm-6.col-md-6.col-lg-4.col-xl-3 
+                                .item
+                                    .image
+                                        a(href="#").find-out
+                                            img(src="/assets/images/product-sale/1-1.jpg", alt="Item")
+                                        a(href="#").find-in
+                                            img(src="/assets/images/product-sale/1.jpg", alt="Item")
+                                    .item-info
+                                        h3.item-title
+                                            a(href="#") Thành công 
+                                        .price 
+                                            span.special-price 500.000
+                                                sup đ
+                                            span.old-price 600.000
+                                                sup đ
+                                    .actions 
+                                        form#formAddProduct(action="", method="POST", enctype="multipart/form-data", data-id="") 
+                                            input.hidden(type="hidden", name="", value="")
+                                            button(type="submit").btn.btn-buy.d-flex.justify-content-center.align-items-center.mx-auto.text-white 
+                                                span Mua hàng
+                                                .icon
+                                                    i.icofont-shopping-cart
+                                    .box-link               
+                                        a(href="/product").link-quickview
+                                            i.icofont-search-1
+                            .col-12.col-sm-6.col-md-6.col-lg-4.col-xl-3 
+                                .item
+                                    .tag-sale 
+                                        span Sale
+                                    .image
+                                        a(href="#").find-out
+                                            img(src="/assets/images/product-sale/1-1.jpg", alt="Item")
+                                        a(href="#").find-in
+                                            img(src="/assets/images/product-sale/1.jpg", alt="Item")
+                                    .item-info
+                                        h3.item-title
+                                            a(href="#") Thành công 
+                                        .price 
+                                            span.special-price 500.000
+                                                sup đ
+                                            span.old-price 600.000
+                                                sup đ
+                                    .actions 
+                                        form#formAddProduct(action="", method="POST", enctype="multipart/form-data", data-id="") 
+                                            input.hidden(type="hidden", name="", value="")
+                                            button(type="submit").btn.btn-buy.d-flex.justify-content-center.align-items-center.mx-auto.text-white 
+                                                span Mua hàng
+                                                .icon
+                                                    i.icofont-shopping-cart
+                                    .box-link               
+                                        a(href="/product").link-quickview
+                                            i.icofont-search-1
+                            .col-12.col-sm-6.col-md-6.col-lg-4.col-xl-3
+                                .item
+                                    .image
+                                        a(href="#").find-out
+                                            img(src="/assets/images/product-sale/1-1.jpg", alt="Item")
+                                        a(href="#").find-in
+                                            img(src="/assets/images/product-sale/1.jpg", alt="Item")
+                                    .item-info
+                                        h3.item-title
+                                            a(href="#") Thành công 
+                                        .price 
+                                            span.special-price 500.000
+                                                sup đ
+                                            span.old-price 600.000
+                                                sup đ
+                                    .actions 
+                                        form#formAddProduct(action="", method="POST", enctype="multipart/form-data", data-id="") 
+                                            input.hidden(type="hidden", name="", value="")
+                                            button(type="submit").btn.btn-buy.d-flex.justify-content-center.align-items-center.mx-auto.text-white 
+                                                span Mua hàng
+                                                .icon
+                                                    i.icofont-shopping-cart
+                                    .box-link               
+                                        a(href="/product").link-quickview
+                                            i.icofont-search-1
+
+
+

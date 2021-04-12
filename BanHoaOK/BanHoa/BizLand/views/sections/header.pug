@@ -1,0 +1,140 @@
+header#header
+    .header-top.d-flex.align-items-center
+        .container 
+            .row.align-items-center
+                .col-12.col-md-4.col-lg-3.order-2.order-md-1.order-lg-1.mb-3.mb-md-0.mb-lg-0
+                    .top-search
+                        form.d-flex.justify-content-center.justify-content-lg-start(action="", method="POST")
+                            input.form-control(type="text", name="search", placeholder="Tìm kiếm sản phẩm...")
+                            button(type="submit")
+                                i.icofont-search-2
+                .col-12.col-md-5.col-lg-6.order-1.order-md-2.order-lg-2.mb-3.mb-md-0.mb-lg-0
+                    .logo.text-center
+                        a.logo-wrapper(href="/")
+                            img(src="assets/images/logo.png", alt="Logo")
+                .col-12.col-md-3.col-lg-3.text-center.text-lg-right.order-3.order-md-3.order-lg-3.mb-2.mb-md-0.mb-lg-0
+                    .mini-cart
+                        .heading-cart.d-flex.align-items-center.justify-content-end 
+                            a(href="#")
+                                i.icofont-cart-alt
+                            .info-cart 
+                                a.cart_num(href="#") 0
+                                span -
+                                a.price_total_(href="#") 0đ
+                        .top-cart.ml-auto
+                            h3.title.text-center Sản phẩm trong giỏ hàng
+                            ul.list-item-cart
+                                li.item.item-cart
+                                    .d-flex.align-items-center
+                                        .image
+                                            a(href="#")
+                                                img(src="/assets/images/product-sale/1-1.jpg", alt="Item") 
+                                        .pl-3.d-flex.flex-column.flex-wrap
+                                            .info
+                                                h3.item-title.text-left
+                                                    a(href="#").text-green Thành công 
+                                            .price.text-left.d-flex.flex-wrap
+                                                span.special-price 500.000₫
+                                                span.old-price 500.000₫
+                                                span x
+                                                    span.quantity 2
+                                                    button.removeFromCartView.d-flex.align-items-center.justify-content-center
+                                                        i.icofont-close-line
+                                li.item.item-cart
+                                    .d-flex.align-items-center
+                                        .image
+                                            a(href="#")
+                                                img(src="/assets/images/product-sale/1-1.jpg", alt="Item") 
+                                        .pl-3.d-flex.flex-column.flex-wrap
+                                            .info
+                                                h3.item-title.text-left
+                                                    a(href="#").text-green Thành công 
+                                            .price.text-left.d-flex.flex-wrap
+                                                span.special-price 500.000₫
+                                                span.old-price 500.000₫
+                                                span x
+                                                    span.quantity 2
+                                                    button.removeFromCartView.d-flex.align-items-center.justify-content-center
+                                                        i.icofont-close-line
+                            .subtotal.d-flex.align-items-center.justify-content-between
+                                span.subtotal-text Tổng tiền:
+                                span.subtotal-amount 500.000₫
+                            .py-3.text-center
+                                a(href="#").hover-purple.text-white.btn.btn-cart-view
+                                    i.icofont-cart
+                                    span Xem giỏ hàng
+    .header-bottom
+        .container
+            nav#nav.d-none.d-lg-block
+                ul.d-flex.justify-content-center.flex-wrap
+                    li
+                        a(href="#").text-white.hover-text-green Trang chủ
+                    li 
+                        a(href="#").text-white.hover-text-green Giới thiệu
+                    li.dropdown
+                        a(href="#").text-white.hover-text-green Sản phẩm
+                            i.bx.bx-chevron-down
+                        ul
+                            li 
+                                a(href="#").text-white.hover-text-green Hoa sinh nhật
+                            li 
+                                a(href="#").text-white.hover-text-green Hoa tươi 
+                            li 
+                                a(href="#").text-white.hover-text-green Hoa chia buồn
+                            li 
+                                a(href="#").text-white.hover-text-green Lẵng hoa
+                            li 
+                                a(href="#").text-white.hover-text-green Quà tặng
+                    li 
+                        a(href="#").text-white.hover-text-green Quà tặng
+                    li 
+                        a(href="#").text-white.hover-text-green Hoa sinh nhật
+                    li 
+                        a(href="#").text-white.hover-text-green Hoa khai trương
+                    li 
+                        a(href="#").text-white.hover-text-green Chính sách bán hàng
+                    li 
+                        a(href="#").text-white.hover-text-green Liên hệ
+
+            nav#nav-mobile.aside-category.d-block.d-lg-none
+                .container.p-0
+                    #nav-mobile-hamburger.hamburger.d-inline-flex.align-items-center
+                        i.bx.bx-menu
+                .container.p-0
+                    .list-nav-mobile
+                        .row.justify-content-center
+                            .col-12.col-md-10.col-lg-10
+                                ul.d-flex.flex-column
+                                    li
+                                        a(href="#").text-white.hover-text-green Trang chủ
+                                    li 
+                                        a(href="#").text-white.hover-text-green Giới thiệu
+                                    li.dropdown.dropdown-btn
+                                        a(href="#").d-flex.align-items-center.justify-content-between.text-white.hover-text-green.dropdown-btn Sản phẩm
+                                            i.bx.bx-chevron-down
+                                        ul
+                                            li 
+                                                i.bx.bx-chevron-right
+                                                a(href="#").text-white.hover-text-green Hoa sinh nhật
+                                            li 
+                                                i.bx.bx-chevron-right
+                                                a(href="#").text-white.hover-text-green Hoa tươi 
+                                            li 
+                                                i.bx.bx-chevron-right
+                                                a(href="#").text-white.hover-text-green Hoa chia buồn
+                                            li 
+                                                i.bx.bx-chevron-right
+                                                a(href="#").text-white.hover-text-green Lẵng hoa
+                                            li 
+                                                i.bx.bx-chevron-right
+                                                a(href="#").text-white.hover-text-green Quà tặng
+                                    li 
+                                        a(href="#").text-white.hover-text-green Quà tặng
+                                    li 
+                                        a(href="#").text-white.hover-text-green Hoa sinh nhật
+                                    li 
+                                        a(href="#").text-white.hover-text-green Hoa khai trương
+                                    li 
+                                        a(href="#").text-white.hover-text-green Chính sách bán hàng
+                                    li 
+                                        a(href="#").text-white.hover-text-green Liên hệ

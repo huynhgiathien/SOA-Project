@@ -1,0 +1,111 @@
+#policy{
+    margin-top: 40px;
+    
+    .policy-content{
+        height: 85px;
+        border-radius: 10px;
+        overflow: hidden;
+        height: 100%; //- khi thêm class ở dưới container thì phải cho height 100%
+        box-shadow: 0 5px 25px 0 rgba(0, 0, 0, 0.1);
+    }
+    .info{
+        padding: 15px 20px;
+    }
+    h4{
+        top: 0px;
+        font-size: 20px;
+        color: #9cd847;
+        font-weight: 600;
+    }
+    i{
+        margin-right: 5px;
+        font-size: 22px;
+    }
+    p{
+        margin-bottom: 0;
+    }
+    .item-policy:first-child{
+        position: relative;
+        .info{
+            position: relative;
+            color: white;
+        }
+        h4{
+            color: white;
+        }
+        &::before{
+            content: '';
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            border-right: 60px solid white;
+            border-top: 105px solid transparent;
+            background-color: $purple-background;
+        }
+    }
+}
+
+/* Responsive */
+@include max-tablet{
+    #policy{
+        .info{
+            padding: 15px;
+        }
+        h4{
+            font-size: $f-size-other;
+        }
+        i{
+            font-size: 17px;
+        }
+        .item-policy:first-child{
+            h4{
+                color: $green-hover;
+            }
+            &::before{
+                border-right: 0px;
+                border-top: 0px;
+            }
+        }
+        .item-policy{
+            .info{
+                position: relative;
+                color: white;
+            }
+            h4{
+                color: $green-hover;
+            }
+            &::before{
+                content: '';
+                position: absolute;
+                left: 0;
+                right: 0;
+                top: 0;
+                bottom: 0;
+                border-right: 0px;
+                border-top: 0px;
+                background-color: $purple-background;
+            }
+        }
+    }
+}
+
+@include max-mobile{
+    #policy{
+        .item-policy:first-child{
+            p{
+                color: white;
+            }
+        }
+        .item-policy{
+            p{
+                font-size: $f-size-primary;
+                color: black;
+            }
+            &::before{
+                background-color: white;
+            }
+        }
+    }
+}

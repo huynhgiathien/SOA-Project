@@ -1,0 +1,10 @@
+[{
+  "_id": {
+    "$oid": "605233ef42a80b36b0ce3588"
+  },
+  "id": "SP001",
+  "name": "Lê Phú An",
+  "phone": "01234567890",
+  "address": "7 Trần Hưng Đạo, Tân Sơn Nhì, Tân Phú, Thành phố Hồ Chí Minh",
+  "identity": "0990114214218"
+}]

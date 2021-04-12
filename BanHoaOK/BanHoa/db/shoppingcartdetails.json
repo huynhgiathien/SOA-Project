@@ -1,0 +1,9 @@
+[{
+  "_id": {
+    "$oid": "606af532b2446c2c08fe96f5"
+  },
+  "product_id": "",
+  "unitprice": 0,
+  "quantity": 0,
+  "shoppingcart_id": ""
+}]

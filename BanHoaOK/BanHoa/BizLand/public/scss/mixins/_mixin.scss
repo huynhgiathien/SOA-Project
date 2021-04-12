@@ -1,0 +1,43 @@
+/* === MIN WIDTH === */
+@mixin min-smobile{
+    @media(min-width: $s-mobile){
+      @content;
+    }
+  }
+  @mixin min-mobile{
+    @media(min-width: $mobile){
+      @content;
+    }
+  }
+  @mixin min-tablet{
+    @media(min-width: $tablet){
+      @content;
+    }
+  }
+  @mixin min-desktop{
+    @media(min-width: $desktop){
+      @content;
+    }
+  }
+  
+  /* === MAX WIDTH === */
+  @mixin max-smobile{
+    @media(max-width: $s-mobile){
+      @content;
+    }
+  }
+  @mixin max-mobile{
+    @media(max-width: $mobile){
+      @content;
+    }
+  }
+  @mixin max-tablet{
+    @media(max-width: $tablet){
+      @content;
+    }
+  }
+  @mixin max-desktop{
+    @media(max-width: $desktop){
+      @content;
+    }
+  }

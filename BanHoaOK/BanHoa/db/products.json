@@ -1,0 +1,21 @@
+[{
+  "_id": {
+    "$oid": "6052391042a80b36b0ce358f"
+  },
+  "id": "PD001",
+  "sup_id": "SUP001",
+  "cate_id": "CT001",
+  "name": "Hoa cưới hồng trắng xanh",
+  "price": 1500000,
+  "unitsinstock": 10
+},{
+  "_id": {
+    "$oid": "6052397a42a80b36b0ce3590"
+  },
+  "id": "PD002",
+  "sup_id": "SUP001",
+  "cate_id": "CT001",
+  "name": "Hoa cưới thiên nga",
+  "price": 650000,
+  "unitsinstock": 10
+}]

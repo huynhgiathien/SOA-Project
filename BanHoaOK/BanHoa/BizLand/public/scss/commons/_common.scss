@@ -1,0 +1,485 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: $f-primary;
+    font-size: $f-size-secondary;
+}
+h1, h2 , h3, h4, h5, h6{
+    color: $heading;
+}
+.btn{
+    &:focus, &:active:focus, &.active:focus{
+        box-shadow: none !important;
+        outline: none !important;
+    }
+}
+a{
+    color: black !important;
+    text-decoration: none !important;
+    outline: none;
+}
+ul{
+    list-style: none;
+}
+img{
+    width: auto;
+    max-width: 100%;
+}
+
+
+/* === Container === */
+.container{
+    @include min-smobile{
+        max-width: 560px !important;
+    }
+    @include min-mobile{
+        max-width: 750px !important;
+    }
+    @include min-tablet{
+        max-width: 980px !important;
+    }
+    @include min-desktop{
+        max-width: 1200px !important;
+    }
+}
+
+.mb-31{
+    margin-bottom: 31px;
+}
+
+//- Color text
+.purple-text{
+    color: $purple-background !important;
+}
+
+//- Change color placeholder of input
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: white !important;
+    opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: white !important;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+    color: white !important;
+}
+
+//- Section title
+.section-title{
+    margin-bottom: 25px;
+    .title{
+        display: flex;
+        align-items: center;
+        padding: 0px 5px;
+        font-size: 30px;
+        font-weight: 400;
+        letter-spacing: 1.5px;
+        &:before, &:after{
+            content: '';
+            flex: 1 1;
+            border-bottom: 3px double #d7d7d7;
+        }
+        &:before{
+            margin-right: 10px;
+        }
+        &:after{
+            margin-left: 10px;
+        }
+    }
+}
+
+//- Social links
+.social-links{
+    a{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 35px;
+        width: 35px;
+        border-radius: 3px;
+        margin-right: 7px;
+        background-color: $purple-background;
+        color: white !important;  
+        transition: .35s ease-in-out;
+        &:hover{
+            background-color: $purple-hover;
+        }
+    }
+    i{
+        font-size: $f-size-other;
+    }
+}
+
+//- Item (Product flower)
+.item{
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    padding: 15px 15px 0px 15px;
+    margin-bottom: 30px;
+    border-radius: 6px;
+    border: 1px solid rgb(235, 235, 235);
+    cursor: pointer;
+    transition: .35s;
+    .tag-sale{
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        border-top: 71px solid #8781bd;
+        border-left: 71px solid transparent;
+        z-index: 10;
+        font-weight: bold;
+        span{
+            font-size: 20px;
+            color: white;
+            transform: rotate(45deg);
+            position: absolute;
+            top: -63px;
+            right: 3px;
+        }
+    }
+    .image{
+        position: relative;
+        overflow: hidden;
+        margin-bottom: 15px;
+        a{
+            display: block;
+            transition: .5s;
+        }
+        .find-in{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 100%;
+            transform: translate(-50%, -50%) scale(0) ;
+            opacity: 0;
+            visibility: hidden;
+            margin: 0 auto;
+            img{
+                height: 200px;
+                object-fit: scale-down;
+            }
+        }
+    }
+
+    .item-title{
+        font-weight: 400;
+        a{
+            font-size: 17px;
+            transition: .35s;
+            &:hover{
+                color: $purple-hover !important;
+            }
+        }
+    }
+    .price{
+        margin-bottom: 10px;
+        .special-price{
+            color: $green;
+            font-size: 18px;
+            font-weight: 500;
+            margin-right: 8px;
+        }
+        .old-price{
+            color: $purple-background;
+            text-decoration: line-through;
+        }
+    }
+    .actions{
+        margin-bottom: 7px;
+        .btn-buy{
+            background-color: $green;
+            border-radius: 4px 4px 4px 4px;
+            border: none;
+            padding: 0;
+            transition: .35s;
+            span{
+                padding: 0px 25px;
+            }
+        }
+        .icon{
+            background-color: #acd373;
+            color:white;
+            width: 37px;
+            height: 100%;
+            line-height: 37px;
+            border-radius: 0px 4px 4px 0px;
+            transition: .35s;
+        }         
+    }
+    .box-link{
+        padding: 5px 0px 8px;
+        overflow: hidden;
+        .link-quickview{
+            display: inline-block;
+            line-height: 1;
+            opacity: 0;
+            visibility: hidden;
+            padding: 3px 0px;
+            transform: translate(0px, -30px);
+            transition: 0.5s ease-out;
+        }
+    }
+    &:hover{
+        border-color: $purple-hover-border;
+        box-shadow: 0 5px 30px rgba(0, 0, 0, .1);
+        .image{
+            .find-in{
+                transform: translate(-50%, -50%) scale(1);
+                opacity: 1;
+                visibility: visible;
+            }
+            .find-out{
+                transform: scale(0);
+                opacity: 0;
+                visibility: hidden;
+            }
+        }
+        .box-link{
+            overflow: visible;
+            .link-quickview{
+                transform: translate(0, 0);
+                opacity: 1;
+                visibility: visible;
+                color: $purple-background !important;
+            }
+        }
+        .actions{
+            .btn-buy{
+                background-color: $purple-background;
+            }
+            .icon{
+                background-color: $purple-hover;
+            }         
+        }
+    }
+}
+
+//- Hover purple
+.hover-purple{
+    transition: .35s ease;
+    &:hover{
+        color: white;
+        background-color: $purple-hover !important;
+    } 
+}
+
+//- Hover text green
+.hover-text-green{
+    transition: .35s ease;
+    &:hover{
+        color: $green-hover !important;
+    } 
+}
+
+//- Hover text green
+.hover-text-purple{
+    transition: .35s ease;
+    &:hover{
+        color: $purple-hover !important;
+    } 
+}
+
+//- Slick slider - dots
+.slick-slider{
+    position: relative;
+    .slick-track{
+        > div{
+            border: none;
+            outline: none;
+        }
+    }
+    .slick-dots{
+        position: absolute;
+        bottom: 0;
+        display: flex;
+        justify-content: flex-end;
+        padding: 10px 10px 10px 0px;
+        button{
+            width: 100%;
+            height: 100%;
+            padding: 0;
+            &::before{
+                content: '';
+                width: 100%;
+                height: 100%;
+                border-radius: 50%;
+                background-color: rgba(255, 255, 255, 0.3);
+                opacity: 1;
+                transition: 0.35s;
+            }
+            &:hover{
+                &::before{
+                    background-color: $purple-background;
+                }
+            }
+        }
+        li{
+            width: 12px;
+            height: 12px;
+            &.slick-active{
+                button::before{
+                    background-color: $purple-background;
+                }
+            }
+        }
+    }
+}
+
+//- Slick arrows (General)
+.slick-arrow{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+    z-index: 10;
+    i{
+        font-size: 25px;
+    }
+}
+.prev-arrow, .next-arrow{
+    width: 45px;
+    height: 45px;
+    border: 2px solid;
+    border-radius: 100%;
+    text-align: center;
+}
+.prev-arrow{
+    left: 25px;
+    padding-right: 1px;
+}
+.next-arrow{
+    right: 25px;
+    padding-left: 2px;
+}
+
+//- Search box
+.top-search{
+    input{
+        font-size: $f-size-secondary;
+        background-color: $purple-hover;
+        color: white;
+        height: 40px;
+        border-radius: 0;
+        border: none;
+        line-height: 1;
+        &:focus{
+            box-shadow: none;
+            outline: none;
+            background-color: $purple-hover;
+            color: white;
+        }
+    }
+    button[type="submit"]{
+        width: 45px;
+        line-height: 40px;
+        outline: none;
+        border: 0;
+        background-color: #8781bd;
+        color: white;
+    }
+}
+
+//- Header nav-mobile, .aside-category in collection.pug
+#nav-mobile, .aside-category{
+    ul{
+        > li:not(:last-child){
+            border-bottom: 1px solid #dbdbdb;
+        }
+    }
+    a{
+        display: block;
+        padding: 8px 0px;
+    }
+    .dropdown{
+        padding-right: 5px;
+        > a{
+            i{
+                transition: 0.35s;
+                &.rotate180deg{
+                    transform: rotate(180deg);
+                }
+            }
+        }
+        > ul{
+            display: none;
+            a{
+                margin-left: 5px;
+            }
+        }
+    }
+}
+
+//- Adjust max-heightof gslider
+.gslider{
+    .gslide{
+        .gslide-inner-content{
+            .ginner-container{
+                .gslide-media{
+                    img{
+                        max-height: 90vh;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@include max-tablet{
+    .item{
+        padding-bottom: 15px;
+        .box-link{
+            display: none;
+        }
+        .item-title{
+            margin-bottom: 3px;
+        }
+    }
+}
+
+/* Responsive */
+@include max-mobile{
+    .section-title{
+        text-align: center;
+        .title{
+            font-size: 26px;
+            padding: 0;
+        }
+    }
+    //- Slick slider - dots
+    .slick-slider{
+        .slick-dots{
+            justify-content: center;
+        }
+    }
+
+    //- Slick arrows (Slider)
+    .slick-arrow{
+        font-size: 24px;
+    }
+    .prev-arrow, .next-arrow{
+        width: 38px;
+        height: 38px;
+    }
+
+    //- Slick slider - dots
+    .slick-slider{
+        .slick-dots{
+            li{
+                width: 11px;
+                height: 11px;
+                margin: 0 3px;
+            }
+        }
+    }
+}

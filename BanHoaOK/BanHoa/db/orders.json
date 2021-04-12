@@ -1,0 +1,12 @@
+[{
+  "_id": {
+    "$oid": "606ae7e8b2446c2c08fe96f4"
+  },
+  "id": "OD001",
+  "customer_id": "KH001",
+  "employee_id": "NV001",
+  "shipper_id": "SP001",
+  "order_date": "Auto(Now)",
+  "ship_date": "Confirm-Form",
+  "ship_address": "Form"
+}]

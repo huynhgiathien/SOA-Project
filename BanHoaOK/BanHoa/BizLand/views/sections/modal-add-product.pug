@@ -1,0 +1,83 @@
+//- Modal
+#modalAddProduct.modal.fade(tabindex='-1' aria-labelledby='exampleModalLabel' aria-hidden='true')
+    .modal-dialog.modal-lg
+        .modal-content
+            .modal-header
+                h5#modalAddProductLabel.modal-title.w-100.text-center
+                    .icon.text-center
+                        i.bx.bx-check
+                    | Đã thêm vào giỏ hàng (5 sản phẩm)
+                button.close.d-flex.align-items-center.justify-content-center.hover-purple(type='button' data-dismiss='modal' aria-label='Close')
+                    span(aria-hidden='true')
+                        i.bx.bx-x
+            .modal-body
+                form(action="/cart", method="POST")
+                    table.table-top.table.mb-0
+                        thead
+                            tr
+                                th(scope='col') Sản phẩm
+                                //- th(scope='col') Tên sản phẩm
+                                //- th(scope='col') Giá
+                                th(scope='col') Số lượng
+                                th(scope='col') Thành tiền
+                                th(scope='col') Xóa
+                        tbody
+                            tr
+                                td.product(style="width: 40%")
+                                    .d-flex.flex-column.flex-md-row
+                                        .image
+                                            img(src="/assets/images/cart/1.jpg", alt="Item")
+                                        .product-info.d-flex.flex-column.justify-content-center.pl-0.pl-md-2
+                                            a(href="#").hover-text-purple.title-item Tình khúc vàng
+                                            span.price-cart1 450.000₫                                   
+                                td.text-center
+                                    //- If press negative number then change postive number absolutely
+                                    input.text-center.quantity(type="number", name="number", value= "1", min="0", oninput="this.value = Math.abs(this.value)")
+                                td.text-center
+                                    span.price-cart2 900.000₫
+                                td(scope='row').text-center
+                                    a.hover-text-purple.remove-item-cart(href="#")
+                                        i.bx.bx-trash
+                            tr
+                                td.product(style="width: 40%")
+                                    .d-flex.flex-column.flex-md-row
+                                        .image
+                                            img(src="/assets/images/cart/1.jpg", alt="Item")
+                                        .product-info.d-flex.flex-column.justify-content-center.pl-0.pl-md-2
+                                            a(href="#").hover-text-purple.title-item Tình khúc vàng
+                                            span.price-cart1 450.000₫                                   
+                                td.text-center
+                                    //- If press negative number then change postive number absolutely
+                                    input.text-center.quantity(type="number", name="number", value= "1", min="0", oninput="this.value = Math.abs(this.value)")
+                                td.text-center
+                                    span.price-cart2 900.000₫
+                                td(scope='row').text-center
+                                    a.hover-text-purple.remove-item-cart(href="#")
+                                        i.bx.bx-trash
+                            tr
+                                td.product(style="width: 40%")
+                                    .d-flex.flex-column.flex-md-row
+                                        .image
+                                            img(src="/assets/images/cart/1.jpg", alt="Item")
+                                        .product-info.d-flex.flex-column.justify-content-center.pl-0.pl-md-2
+                                            a(href="#").hover-text-purple.title-item Tình khúc vàng
+                                            span.price-cart1 450.000₫                                   
+                                td.text-center
+                                    //- If press negative number then change postive number absolutely
+                                    input.text-center.quantity(type="number", name="number", value= "1", min="0", oninput="this.value = Math.abs(this.value)")
+                                td.text-center
+                                    span.price-cart2 900.000₫
+                                td(scope='row').text-center
+                                    a.hover-text-purple.remove-item-cart(href="#")
+                                        i.bx.bx-trash
+            .modal-footer.align-items-start
+                a(href="#").hover-purple.btn.form-cart-continue.text-white.mr-auto
+                    i.icofont-bubble-left
+                    | Tiếp tục mua hàng 
+                .d-flex.flex-column.m-0
+                    .total
+                        span Tổng tiền:
+                        span &nbsp
+                        span.total-price 1.000.000₫
+                    //- button.btn.btn-secondary(type='button' data-dismiss='modal') Close
+                    button(type="submit").hover-purple.btn.btn-checkout.btn-primary Thanh toán

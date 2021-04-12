@@ -1,0 +1,15 @@
+[{
+  "_id": {
+    "$oid": "6052376242a80b36b0ce358d"
+  },
+  "id": "CT001",
+  "name": "Hoa cưới",
+  "descriptions": ""
+},{
+  "_id": {
+    "$oid": "6052378b42a80b36b0ce358e"
+  },
+  "id": "CT002",
+  "name": "Quà 8/3",
+  "descriptions": ""
+}]
